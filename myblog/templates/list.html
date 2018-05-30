@@ -4,7 +4,7 @@
         <div class="post">
         <h2><a href="{% url 'blog_detail' post.pk %}">{{ post }}</a></h2>
             <p class="byline">
-            Posted by {{ post.author.name }} &mdash; {{ post.published_date }}
+            Posted by {{ post.author.get_username }} &mdash; {{ post.published_date }}
             </p>
         <ul class="categories">
         {% for category in post.categories.all %}
